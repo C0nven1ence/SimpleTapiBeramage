@@ -1,0 +1,99 @@
+* {
+	box-sizing: border-box;
+	margin:0px;
+	padding: 0px;
+}
+
+*:focus {
+	outline: 0;
+}
+
+body {
+	align-items:center;
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
+
+}
+
+.isi {
+	font-size: 38px;
+	color: white;
+	z-index: 1;
+}
+
+.hitam {
+	text-align: center;
+	color: black;
+	/*position: absolute;
+	color: black;
+	top: 300px;
+	right: 70px;
+	font-size: 38px;*/
+}
+
+.project {
+	width: 270px;
+	position: absolute;
+	margin-left: 2px;
+	font-size: 18px;
+	margin-top: 95%;
+	border:1px solid white;
+	
+}
+
+input {
+	display: flex;
+	justify-content: center;
+}
+
+input[type="checkbox"] {
+	-webkit-appearance: none;
+	display: none;
+	visibility: hidden;
+}
+
+input [type="checkbox"]:checked - .check:before {
+	transform: translateX(-50px);
+}
+
+input[type="checkbox"]:checked ~ .check {
+	background-color: white;
+	box-shadow: 0 0 0 50000px #000;
+}
+
+.check:before,
+.check:after{
+	border-radius: 50%;
+	content: '';
+	height: 16px;
+	position: absolute;
+	top: 2px;
+	transition: transform 0.5s ease;
+	width: 16px;
+}
+
+.check:before {
+	background-color: #fff;
+	left: 2px;
+}
+
+.check {
+	background-color: #000;
+	border-radius: 20px;
+	cursor: pointer;
+	display: block;
+	height: 20px;
+	overflow: hidden;
+	position: relative;
+	transition: background-color 0.5s ease-in,
+				box-shadow 0.5s ease-in;
+	width: 40px;
+}
+
+@media screen and (max-width: 576px){
+	.hitam {
+		top: 500px;
+	} 
+
+}
